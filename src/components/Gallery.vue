@@ -85,5 +85,6 @@ const images = ref([
 
 #gallery {
     background-color: var(--neutral);
+    padding-bottom: 24px;
 }
 </style>
