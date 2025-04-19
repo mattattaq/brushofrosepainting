@@ -2,30 +2,46 @@
 </script>
 <template>
     <header>
-        <ul>
-            <li><a href="#splash">Top</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#book">Book Now</a></li>
-        </ul>
+        <div class="container">
+            <div class="header">
+                <div class="logo"></div>
+                <ul>
+                    <li><a href="#splash">Top</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#book">Book Now</a></li>
+                </ul>
+            </div>
+
+        </div>
+
     </header>
 </template>
 
 <style scoped>
 header {
-    position: fixed;
     width: 100%;
     display: flex;
-    height: 50px;
+    height: 150px;
+    align-items: end;
     background-color: var(--rose);
-    z-index: 101;
-    top: 0;
+}
+
+.header {
+    display: flex;
+}
+
+.logo {
+    border: solid 1px black;
+    width: 300px;
+    height: 50px;
 }
 
 header ul {
     list-style: none;
     display: flex;
-    width: 100%;
+    width: auto;
+
 }
 
 header ul li {
@@ -33,6 +49,7 @@ header ul li {
     margin-right: 5%;
     font-weight: bold;
     width: auto;
+    min-width: 75px;
 }
 
 header ul li a {

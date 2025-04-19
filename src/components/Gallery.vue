@@ -1,5 +1,7 @@
 <script setup>
 import { ref } from 'vue';
+import { VueperSlides, VueperSlide } from 'vueperslides'
+import 'vueperslides/dist/vueperslides.css'
 
 const images = ref([
     {
@@ -53,9 +55,9 @@ const images = ref([
         <div class="container">
             <h2>Gallery</h2>
             <div class="gallery-grid">
-                <div class="gallery-item" v-for="image in images" :key="image.src">
-                    <img v-lazy="image.src" :alt="image.alt" />
-                </div>
+                <vueper-slides class="no-shadow gallery-item" :visible-slides="5" :dragging-distance="70">
+                    <vueper-slide v-for="image in images" :key="image.alt" :image="image.src" />
+                </vueper-slides>
             </div>
         </div>
     </section>
