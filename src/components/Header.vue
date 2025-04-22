@@ -24,7 +24,6 @@ header {
     display: flex;
     height: 150px;
     align-items: end;
-    background-color: var(--rose);
 }
 
 .header {
@@ -41,7 +40,6 @@ header ul {
     list-style: none;
     display: flex;
     width: auto;
-
 }
 
 header ul li {
@@ -50,15 +48,19 @@ header ul li {
     font-weight: bold;
     width: auto;
     min-width: 75px;
+    font-family: "Staatliches", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 32px;
 }
 
 header ul li a {
-    color: white;
+    color: grey;
     text-decoration: none;
 }
 
 header ul li a:hover {
-    color: var(--stem);
-    font-weight: bold;
+    color: var(--rose);
+    transition: color 0.5s;
 }
 </style>

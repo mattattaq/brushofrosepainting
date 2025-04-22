@@ -52,10 +52,10 @@ const images = ref([
 
 <template>
     <section id="gallery">
-        <div class="container">
-            <h2>Gallery</h2>
+        <div class="no-wrap center-content">
             <div class="gallery-grid">
-                <vueper-slides class="no-shadow gallery-item" :visible-slides="5" :dragging-distance="70">
+                <vueper-slides :gap="3" class="no-shadow" :visible-slides="4" :slide-ratio="1 / 4" :bullets="false"
+                    :dragging-distance="70" fixed-height="320px" :infinite="true">
                     <vueper-slide v-for="image in images" :key="image.alt" :image="image.src" />
                 </vueper-slides>
             </div>
@@ -65,10 +65,14 @@ const images = ref([
 
 <style scoped>
 .gallery-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    justify-content: center;
+    width: calc(100% - 100px);
+    margin-left: 50px;
+}
+
+.no-wrap {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .gallery-item {
@@ -87,6 +91,16 @@ const images = ref([
 
 #gallery {
     background-color: var(--neutral);
-    padding-bottom: 24px;
+    min-height: auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+#gallery .vueperslides--fixed-height.vueperslides--bullets-outside {
+    margin-bottom: unset !important;
+}
+
+.vueperslide--visible:hover {
+    filter: grayscale(100%);
 }
 </style>
