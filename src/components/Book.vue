@@ -58,6 +58,10 @@ function sendEmail() {
     max-width: 400px;
     margin: 0 auto;
     padding: 16px;
+    font-family: "Saira Semi Condensed", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+
 }
 
 input,
@@ -69,15 +73,19 @@ textarea {
 }
 
 button {
-    background-color: #2A7B9B;
+    background-color: var(--rose);
     color: white;
     border: none;
     padding: 10px;
     border-radius: 4px;
     cursor: pointer;
+    font-family: "Staatliches", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
 }
 
 button:hover {
-    background-color: #215e74;
+    background-color: var(--rose-lite);
 }
 </style>
