@@ -51,7 +51,7 @@ const images = ref([
 </script>
 
 <template>
-    <section id="gallery">
+    <section id="gallery" class="fade-in">
         <div class="no-wrap center-content">
             <div class="gallery-grid">
                 <vueper-slides :gap="3" class="no-shadow" :visible-slides="4" :slide-ratio="1 / 4" :bullets="false"

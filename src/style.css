@@ -44,3 +44,12 @@ p, span {
   font-weight: 200;
   font-style: normal;
 }
+@media screen and (max-width: 768px) {
+  #splash .container{
+    flex-direction: column;
+    height: auto;
+  }
+  .half {
+    width: 100%;
+  }
+}

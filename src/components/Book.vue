@@ -8,7 +8,7 @@ const message = ref('')
 function sendEmail() {
     const subject = encodeURIComponent(`Booking Inquiry from ${name.value}`)
     const body = encodeURIComponent(`Name: ${name.value}\nEmail: ${email.value}\n\nMessage:\n${message.value}`)
-    const mailtoLink = `mailto:your@email.com?subject=${subject}&body=${body}`
+    const mailtoLink = `mailto:brushofrosepainting@gmail.com?subject=${subject}&body=${body}`
 
     window.location.href = mailtoLink
 }
