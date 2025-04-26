@@ -5,6 +5,7 @@ import Splash from './components/Splash.vue';
 import Gallery from './components/Gallery.vue';
 import Book from './components/Book.vue';
 import About from './components/About.vue';
+import FAQs from './components/FAQs.vue';
 import Footer from './components/Footer.vue';
 
 onMounted(() => {
@@ -18,11 +19,12 @@ onMounted(() => {
         }
       });
     },
-    { threshold: 0.3 } // Element becomes visible when 30% of it is in view
+    { threshold: 0.3 }
   );
 
   elements.forEach((el) => observer.observe(el));
 });
+
 </script>
 
 <template>
@@ -31,6 +33,7 @@ onMounted(() => {
   <About />
   <Gallery />
   <Book />
+  <FAQs />
   <Footer />
 </template>
 
