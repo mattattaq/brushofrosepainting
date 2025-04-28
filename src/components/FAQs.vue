@@ -66,8 +66,8 @@ const faqs = [
 <style scoped>
 #faq {
     background-color: #f9f9f9;
-    padding: 30px;
     text-align: center;
+    width: 100%;
 }
 
 .container {

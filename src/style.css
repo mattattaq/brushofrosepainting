@@ -43,7 +43,6 @@ section {
   display: flex;
   min-width: 300px;
   border: solid blue;
-  flex: 0 0 50%;
 }
 
 h1, h2, h3, h4, h5 {
@@ -55,6 +54,9 @@ p, span {
   font-family: "Saira Semi Condensed", sans-serif;
   font-weight: 200;
   font-style: normal;
+}
+#app {
+  overflow: hidden;
 }
 @media screen and (max-width: 768px) {
   #splash .container{
