@@ -42,7 +42,12 @@ section {
   height: auto;
   display: flex;
   min-width: 300px;
-  border: solid blue;
+}
+
+.col {
+  flex-direction: column;
+  flex-flow: wrap;
+  align-content: center;
 }
 
 h1, h2, h3, h4, h5 {

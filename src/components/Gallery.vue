@@ -1,61 +1,72 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 import { VueperSlides, VueperSlide } from 'vueperslides'
 import 'vueperslides/dist/vueperslides.css'
+import bear from '../assets/bear.jpg'
+import foreverHome from '../assets/forever-home.jpg'
+import hair from '../assets/hair.jpg'
+import misty from '../assets/misty.jpg'
+import muralYoga from '../assets/mural-yoga.jpg'
+import mural from '../assets/mural.jpg'
+import spa2 from '../assets/spa-2.jpg'
+import spa from '../assets/spa.jpg'
+import bear2 from '../assets/bear-2.jpg'
 
 const images = ref([
-    {
-        src: 'https://picsum.photos/200/300',
-        alt: 'Image 1'
-    },
-    {
-        src: 'https://picsum.photos/200/300',
-        alt: 'Image 2'
-    },
-    {
-        src: 'https://picsum.photos/200/300',
-        alt: 'Image 3'
-    },
-    {
-        src: 'https://picsum.photos/200/300',
-        alt: 'Image 4'
-    },
-    {
-        src: 'https://picsum.photos/200/300',
-        alt: 'Image 5'
-    },
-    {
-        src: 'https://picsum.photos/200/300',
-        alt: 'Image 6'
-    },
-    {
-        src: 'https://picsum.photos/200/300',
-        alt: 'Image 7'
-    },
-    {
-        src: 'https://picsum.photos/200/300',
-        alt: 'Image 8'
-    },
-    {
-        src: 'https://picsum.photos/200/300',
-        alt: 'Image 9'
-    },
-    {
-        src: 'https://picsum.photos/200/300',
-        alt: 'Image 10'
-    },
-    {
-        src: 'https://picsum.photos/200/300',
-        alt: 'Image 11'
-    }])
+    { src: bear, alt: 'Image 1' },
+    { src: foreverHome, alt: 'Image 2' },
+    { src: hair, alt: 'Image 3' },
+    { src: misty, alt: 'Image 4' },
+    { src: muralYoga, alt: 'Image 5' },
+    { src: mural, alt: 'Image 6' },
+    { src: spa2, alt: 'Image 7' },
+    { src: spa, alt: 'Image 8' },
+    { src: bear2, alt: 'Image 9' }
+])
+
+const visibleSlides = ref(4)
+
+const updateVisibleSlides = () => {
+    const width = window.innerWidth || document.documentElement.clientWidth
+
+    if (width < 600) {
+        visibleSlides.value = 2
+    } else if (width < 768) {
+        visibleSlides.value = 3
+    } else {
+        visibleSlides.value = 4
+    }
+}
+
+// Basic debounce utility
+function debounce(fn, delay = 150) {
+    let timeout
+    return (...args) => {
+        clearTimeout(timeout)
+        timeout = setTimeout(() => {
+            fn(...args)
+        }, delay)
+    }
+}
+
+const debouncedUpdate = debounce(updateVisibleSlides)
+
+onMounted(() => {
+    updateVisibleSlides()
+    window.addEventListener('resize', debouncedUpdate)
+})
+
+onUnmounted(() => {
+    window.removeEventListener('resize', debouncedUpdate)
+})
 </script>
 
 <template>
     <section id="gallery" class="fade-in">
         <div class="no-wrap center-content">
             <div class="gallery-grid">
-                <vueper-slides :gap="3" class="no-shadow" :visible-slides="4" :slide-ratio="1 / 4" :bullets="false"
-                    :dragging-distance="70" fixed-height="320px" :infinite="true">
+                <vueper-slides :gap="3" class="no-shadow" :visible-slides="visibleSlides"
+                    :slide-ratio="1 / visibleSlides" :bullets="false" fixed-height="320px" :infinite="true">
                     <vueper-slide v-for="image in images" :key="image.alt" :image="image.src" />
                 </vueper-slides>
             </div>

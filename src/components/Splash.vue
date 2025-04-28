@@ -5,10 +5,11 @@
     <section id="splash">
         <div class="container">
             <div class="half text-center">
-                <p>Here is where I can put an image</p>
+                <img src="../assets/mural.jpg" class="fill-available">
             </div>
-            <div class="half text-center">
+            <div class="half col text-center">
                 <h1>This is your call to action, it's the line that hits the user first so make it a good one!</h1>
+                <a href="#book" class="book" alt="Click this button to navigate to the booking form">Book Now!</a>
             </div>
         </div>
     </section>
@@ -20,16 +21,44 @@ h1 {
     display: block;
 }
 
-.box {
-    width: 100px;
-    height: 100px;
-    border-style: solid;
-    border-width: 1px;
+.book {
+    width: 100%;
+    display: block;
+    flex-direction: column;
+}
+
+.col {
+    flex-direction: column;
+    flex-flow: wrap;
+    align-content: center;
 }
 
 .text-center {
     text-align: center;
     align-items: center;
+}
+
+.book {
+    background-color: var(--stem-lite);
+    width: 150px;
+    position: relative;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 24px;
+    text-decoration: none;
+    font-family: "Staatliches", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    margin: 0 auto;
+}
+
+.book:hover {
+    background-color: var(--neutral);
+}
+
+.fill-available {
+    width: -webkit-fill-available;
 }
 
 #splash {
