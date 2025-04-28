@@ -65,7 +65,7 @@ onUnmounted(() => {
     <section id="gallery" class="fade-in">
         <div class="no-wrap center-content">
             <div class="gallery-grid">
-                <vueper-slides :gap="3" class="no-shadow" :visible-slides="visibleSlides"
+                <vueper-slides :gap="3" class="no-shadow" :touchable="false" :visible-slides="visibleSlides"
                     :slide-ratio="1 / visibleSlides" :bullets="false" fixed-height="320px" :infinite="true">
                     <vueper-slide v-for="image in images" :key="image.alt" :image="image.src" />
                 </vueper-slides>

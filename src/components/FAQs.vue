@@ -54,6 +54,7 @@ const faqs = [
 <template>
     <section id="faq">
         <div class="container">
+            <img src="../assets/itsme-wide.jpg" class="img-fluid" alt="">
             <h2>Frequently Asked Questions</h2>
             <div v-for="(faq, index) in faqs" :key="index" class="faq-item">
                 <h3>{{ index + 1 }}. {{ faq.question }}</h3>
