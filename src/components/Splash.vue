@@ -5,10 +5,11 @@
     <section id="splash">
         <div class="container">
             <div class="half text-center">
-                <img src="../assets/mural.jpg" class="fill-available">
+                <img src="../assets/mural.jpg" class="fill-available"
+                    alt="A trailer with a beatiful yellow, blue, pink, and white flowers painted on a field of grey. To the right a monarch butterfly and to the left a bee.">
             </div>
             <div class="half col text-center">
-                <h1>This is your call to action, it's the line that hits the user first so make it a good one!</h1>
+                <h1 class="text-stretch">Bringing <b>Heart</b> into Every <b>Hue</b></h1>
                 <a href="#book" class="book" alt="Click this button to navigate to the booking form">Book Now!</a>
             </div>
         </div>
@@ -27,12 +28,6 @@ h1 {
     flex-direction: column;
 }
 
-.col {
-    flex-direction: column;
-    flex-flow: wrap;
-    align-content: center;
-}
-
 .text-center {
     text-align: center;
     align-items: center;
@@ -46,7 +41,7 @@ h1 {
     border-radius: 5px;
     font-size: 24px;
     text-decoration: none;
-    font-family: "Staatliches", sans-serif;
+    font-family: "Dancing Script", cursive;
     font-weight: 400;
     font-style: normal;
     color: white;
@@ -63,5 +58,9 @@ h1 {
 
 #splash {
     background-color: var(--rose);
+}
+
+.text-stretch {
+    font-size: xxx-large;
 }
 </style>

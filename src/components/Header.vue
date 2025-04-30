@@ -32,14 +32,14 @@ header {
 }
 
 .logo {
-    font-family: "Staatliches", sans-serif;
+    font-family: "Dancing Script", cursive;
     font-size: 28px;
     color: var(--rose);
     width: 250px;
 }
 
 .logo-img {
-    height: 100px;
+    height: 150px;
     display: block;
     margin-right: 12px;
 }
@@ -56,7 +56,7 @@ header ul li {
     font-weight: bold;
     width: auto;
     min-width: 75px;
-    font-family: "Staatliches", sans-serif;
+    font-family: "Dancing Script", cursive;
     font-weight: 400;
     font-style: normal;
     line-height: 32px;

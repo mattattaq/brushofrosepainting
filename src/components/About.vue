@@ -91,13 +91,14 @@ import { Icon } from "@iconify/vue";
     padding-left: 2%;
 }
 
-#about ul {
+#about ul,
+ol {
     list-style: none;
 }
 
 #about ul li {
     margin-top: 12px;
-    font-family: "Staatliches", sans-serif;
+    font-family: "Dancing Script", cursive;
     font-weight: 400;
     font-style: normal;
 }
