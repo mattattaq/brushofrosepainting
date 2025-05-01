@@ -61,6 +61,9 @@ h1, h2, h3, h4, h5 {
   font-weight: 700;
   font-style: normal;
 }
+h2 {
+  font-size: 2em;
+}
 p, span {
   font-family: "Bodoni Moda", serif;
   font-optical-sizing: auto;

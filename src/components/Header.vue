@@ -60,6 +60,7 @@ header ul li {
     font-weight: 400;
     font-style: normal;
     line-height: 32px;
+    font-size: 20px;
 }
 
 header ul li a {
@@ -70,6 +71,9 @@ header ul li a {
 header ul li a:hover {
     color: var(--rose);
     transition: color 0.5s;
+    border-bottom-width: 5px;
+    border-bottom-style: solid;
+
 }
 
 @media screen and (max-width: 768px) {
