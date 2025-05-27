@@ -10,6 +10,8 @@ import mural from '../assets/mural.jpg'
 import spa2 from '../assets/spa-2.jpg'
 import spa from '../assets/spa.jpg'
 import bear2 from '../assets/bear-2.jpg'
+import cabBefore from '../assets/cabinets-before.jpg'
+import cabAfter from '../assets/cabinet-after.jpg'
 
 const images = ref([
     { src: bear, alt: 'A bear relaxing' },
@@ -20,7 +22,9 @@ const images = ref([
     { src: mural, alt: 'Colorful animal mural on the side of a trailer' },
     { src: spa2, alt: 'Skin Remedy sunset mural' },
     { src: spa, alt: 'Silver Door Spa logo painting' },
-    { src: bear2, alt: 'Another bear picture' }
+    { src: bear2, alt: 'Another bear picture' },
+    { src: cabBefore, alt: 'Cabinet painting before' },
+    { src: cabAfter, alt: 'Cabinet painting after' }
 ])
 
 const columns = ref(4)
