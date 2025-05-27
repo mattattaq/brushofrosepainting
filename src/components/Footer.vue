@@ -12,7 +12,7 @@ import { Icon } from "@iconify/vue";
             <a href="mailto:brushofrosepainting@gmail.com" target="_blank" alt="Email me">
                 <Icon icon="logos:google-gmail" />
             </a>
-            <a href="tel:+11111" alt="Call now">
+            <a href="tel:+13177909663" alt="Call now">
                 <Icon icon="emojione:mobile-phone" />
             </a>
             <p>&copy; brushofrosepainting 2025</p>

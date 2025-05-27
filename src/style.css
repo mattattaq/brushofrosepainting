@@ -81,4 +81,20 @@ p, span {
   .half {
     width: 100%;
   }
+  .header {
+    width: 100%;
+  }
+  .header ul {
+    padding-left: 12px;
+    margin-left: 0px;
+  }
+  #splash {
+    padding-bottom: 24px;
+  }
+  form label input, form label textarea {
+    width: calc(100% - 16px) !important;
+  }
+  h1 {
+    font-size: 2rem !important;
+  }
 }
